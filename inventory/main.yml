@@ -1,0 +1,36 @@
+---
+
+- hosts: localhost
+  vars:
+    url: "http://api.open-notify.org/astros.json"
+  tasks:
+    - name: get url data
+      uri:
+        url: "{{ url }}"
+        status_code: 200
+    - name: use solarwinds module
+      solarwinds:
+        db_name: "a db name"
+        request: " a request of mine"
+      register: resultat
+    - debug: var=resultat
+    # - name: Run maintenance start script
+    #   command:
+    #     cmd: /usr/local/sbin/start_maintenance.sh
+
+    # - name: Confirm that 503 Unavailable response is returned
+    #   uri:
+    #     url: "http://{{ ansible_host }}/api/v1/healthcheck"
+    #     status_code: 503
+
+    # - name: Update application
+    #   command:
+    #     cmd: /usr/local/sbin/update_app.sh
+
+    # - name: Run maintenance end script
+    #   command:
+    #     cmd: /usr/local/sbin/end_maintenance.sh
+
+    # - name: Confirm that 200 OK response is returned
+    #   uri:
+    #     url: "http://{{ ansible_host }}/api/v1/healthcheck"
