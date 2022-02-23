@@ -1,0 +1,10 @@
+---
+ - name: Collects variables from variables.yml
+   hosts: localhost
+   vars_files: custom_vars.json
+   gather_facts: false
+   tasks:
+   - debug:
+      msg:
+       - "My name is {{ a }}"
+       - "We are learning {{ b }}, more precisely the {{ c }} chapter"

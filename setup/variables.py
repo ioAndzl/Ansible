@@ -7,6 +7,30 @@
     -facts and local facts
     -connection variables
 
+.variable precedence
+(Lowest)
+role defaults
+inventory file / script group vars 2
+inventory group_vars/all
+playbook group_vars/all
+inventory group_vars/*
+playbook group_vars/*
+inventory file or script host vars
+inventory host_vars/*
+playbook host_vars/*
+host facts / cached set_facts
+play vars
+play vars_prompt
+play vars_files
+role vars (role/vars/main.yml)
+block vars (only for task in block)
+task vars (only for tasks)
+include_vars
+set_facts / registered vars
+role / include role vars
+include params
+extra vars
+
 .built-in variables
 hostvars : dict {hostnames:{varnames:varvalues}}
 inventory_hostname: name of current host known by ansible

@@ -1,0 +1,8 @@
+---
+ - name: Prompt for user input
+   hosts: localhost
+   gather_facts: no
+   tasks:
+   - debug:
+      msg: "The http_port is {{ http_port }}"
+...

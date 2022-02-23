@@ -2,7 +2,7 @@
 .doc 
 ansible-doc -l
 ansible-doc <module name>
-
+[ssh_connection]
 .generic command
 ansible [-i INVENTORY] [server] [-m MODULE] {-a MODULE_OPTIONS} 
 
@@ -44,8 +44,5 @@ ansible all -m apt -a "name=git state=latest" --become
 
 .execute command as being a different user 
 ansible all -m command -a "whoami" --user andzl --ask-pass
-
-
-
 
 """

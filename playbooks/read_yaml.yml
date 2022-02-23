@@ -1,0 +1,10 @@
+---
+ - name: Collects variables from variables.yml
+   hosts: localhost
+   vars_files: variables.yml
+   gather_facts: false
+   tasks:
+   - debug:
+      msg:
+       - "My name is {{ NAME }}"
+       - "We are learning {{ COURSE }}, more precisely the {{ CHAPTER }} chapter"
