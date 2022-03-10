@@ -1,0 +1,12 @@
+def:
+- control node
+- managed node
+- inventory
+- groupes
+- group_vars
+- host_vars
+- Tasks
+- Modules
+- Roles
+- Playbooks
+- Plugins

@@ -90,6 +90,4 @@ ansible-playbook var_cmd_line.yml -e myvar=varname
 .. see prompt_var.yml
 
 .var from YAML file
-
-
 """

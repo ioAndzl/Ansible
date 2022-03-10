@@ -1,0 +1,32 @@
+priv/pub
+type (rsa, dsa, ecdsa)
+longueur (depends de l'algo)
+
+. command
+ssh-keygen -t ecdsa -b 521 (>600)
+ssh-copy-id (-i location cle prive) user@remote (ajoute la cle public)
+avant la cle publique, possibilité d'ajouter from="10.0.0.?, *, example.com", no-X11-forwarding ssh-rsa AB3Nz...EN8w==andzl@myhost
+.. utilisation 
+ssh -i ~/.ssh/id_pv user@remote
+.. avec un agent
+ssh-add -l (pour voir si il y a un agent)
+eval `ssh-agent` (pour cr)éer un agent)
+ssh-add (va ajouter la cle ssh dans l'agent)
+.. avec un fichier config
+touch ~/.ssh/config
+chmod 600  ~/.config
+cat ~/.config
+ > Host * !monhost*
+    User andzl
+    Port 22
+    IdentityFile ~/.ssh/id_pv
+    LogLevel INFO
+    Compression yes
+    ForwardAgent yes
+    ForwardWX11 yes
+
+ssh remote
+...Astuce pour bypasser la conf
+ssh -F /dev/null user@remote
+... Jump
+ssh - J (proxy command) 

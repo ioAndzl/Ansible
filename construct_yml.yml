@@ -1,0 +1,16 @@
+# variables
+fruit: apple
+vegetable: spinach
+liquid: water
+meat: chicken
+
+# lists
+Fruits:
+- orange
+- apple
+- banana
+
+Vegetables:
+- carrot
+- cauliflower
+- tomato
