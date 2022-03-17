@@ -40,7 +40,7 @@ play_hosts : hostname active in the play
 ansible_version
 
 .variables in inventory
-..host variables
+..host variables in /etc/ansible/hosts
 server1
 server2 http_port=8080 pkg=httpd
 server3
@@ -83,11 +83,14 @@ vars:
 ansible-playbook var_cmd_line.yml -e myvar=varname
 
 
-.set_facts for defining variable dynamically:
-..see set_fact.yml in lab_ansible
+..set_facts for defining variable dynamically:
+...see set_fact.yml in lab_ansible
 
-.prompt var
-.. see prompt_var.yml
+..prompt var
+... see prompt_var.yml
+
+..define variables in a project
+...create host_vars and group_vars directories
 
 .var from YAML file
 """

@@ -1,7 +1,10 @@
 """
 #ansible.cfg / cli
 
-ANSIBLE_CONFIG > ansible.cfg
+ANSIBLE_CONFIG 
+
+> ansible.cfg
+ANSIBLE_CFG
 playbook > ansible.cfg
 ~/.ansible/ansible.cfg
 /etc/ansible/ansible.cfg

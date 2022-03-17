@@ -1,0 +1,20 @@
+---
+ - name: when conditional operator
+   hosts: localhost
+   gather_facts: false
+   vars:
+     x: 10
+     y: 15
+     list: [10,20,30]
+   tasks:
+     - debug:
+         msg:
+          - "The value of x is {{ x }} and the value of y is {{ y }}"
+          - "Our list contains: {{ list }}"
+       when: x != y
+     - debug:
+         msg: "x {{ x }} is present in the list"
+       failed_when: x not in list
+     - fail:
+         msg: "x {{ x }} not present in the list"
+       when: x not in list

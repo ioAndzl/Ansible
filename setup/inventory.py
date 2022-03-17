@@ -69,7 +69,4 @@ ansible_ssh_password=redhat
 
 ..usage
 ansible -i myinventory all -m command -a "whoami"
-
-
-
 """
