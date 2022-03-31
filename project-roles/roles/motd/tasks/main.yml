@@ -1,0 +1,9 @@
+---
+# tasks file for motd
+- name: copy motd file
+  template:
+     src: templates/motd.j2
+     dest: /home/andzl/ioandzl/Ansible/project-roles/roles/motd/files
+     owner: root
+     group: root
+     mode: 0444

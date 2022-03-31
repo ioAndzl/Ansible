@@ -1,0 +1,11 @@
+---
+- name: "test d'un module"
+  hosts: localhost
+  gather_facts: no
+  tasks:
+   - name: 'compute module'
+     count_page:
+      msg: "message to be read"
+     register: resultat
+   - debug: var=resultat
+
